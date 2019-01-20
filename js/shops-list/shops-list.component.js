@@ -5,7 +5,7 @@ angular
         controller: function PhoneDetailController($http) {
             let self = this;
             $http.get('https://dispuites-tool.firebaseio.com/shops.json').then(function (response) {
-                console.log(response.data);
+                // console.log(response.data);
                 self.shops = response.data;
             });
         }
