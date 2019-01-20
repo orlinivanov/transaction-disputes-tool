@@ -9,6 +9,8 @@
         <option value="age">Newest</option>
     </select>
 </p> -->
+<h1>Transactions</h1>
+
 <table>
     <thead>
         <tr>
@@ -29,7 +31,7 @@
             <td>{{transaction.transactionDate | date: 'yyyy-MM-dd'}}</td>
             <td>{{transaction.transactionNumber}}</td>
             <td>EUR</td>
-            <td>{{transaction.transactionAmount}}</td>
+            <td>{{transaction.transactionAmount.toFixed(2)}}</td>
             <td>{{transaction.cardBin}} **** **** {{transaction.cardLastFourDigits}}</td>
             <td>{{transaction.cardProvider}}</td>
             <td>{{transaction.cardEntryMode}}</td>

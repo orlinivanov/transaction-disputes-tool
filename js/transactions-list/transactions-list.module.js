@@ -1,1 +1,1 @@
-angular.module('transactionsList', ['core.transaction']);
+angular.module('transactionsList', ['core.shops']);

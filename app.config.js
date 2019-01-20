@@ -1,15 +1,24 @@
 angular
     .module('disputesApp')
     .config(['$routeProvider', function config($routeProvider) {
-        $routeProvider.
-            when('/', {
+        $routeProvider
+            .when('/', {
                 template: '<transactions-list></transactions-list>'
-            }).
+            })
+            .when('/transactions', {
+                template: '<transactions-list></transactions-list>'
+            })
+            .when('/disputes', {
+                template: '<h1>Disputes Page</h1>'
+            })
+            .when('/shops', {
+                template: '<shops-list></shops-list>'
+            })
             // when('/phones/:phoneId', {
             //     template: '<phone-detail></phone-detail>'
             // }).
-            when('/about', {
+            .when('/about', {
                 template: '<h1>About Page</h1>'
-            }).
-            otherwise('/');
+            })
+            .otherwise('/');
     }]);
