@@ -1,0 +1,52 @@
+<!-- <p>
+    Search:
+    <input ng-model="$ctrl.query">
+</p> -->
+<!-- <p>
+    Sort by:
+    <select ng-model="$ctrl.orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+    </select>
+</p> -->
+<table>
+    <thead>
+        <tr>
+            <th>Transaction date</th>
+            <th>ID</th>
+            <th>Currency</th>
+            <th>Amount</th>
+            <th>Card Number</th>
+            <th>Provider</th>
+            <th>Entry mode</th>
+            <th>Verification</th>
+            <th>Shop ID</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="transaction in $ctrl.transactions">
+            <td>{{transaction.transactionDate | date: 'yyyy-MM-dd'}}</td>
+            <td>{{transaction.transactionNumber}}</td>
+            <td>EUR</td>
+            <td>{{transaction.transactionAmount}}</td>
+            <td>{{transaction.cardBin}} **** **** {{transaction.cardLastFourDigits}}</td>
+            <td>{{transaction.cardProvider}}</td>
+            <td>{{transaction.cardEntryMode}}</td>
+            <td>{{transaction.cardVerificationMethod}}</td>
+            <td>{{transaction.shopId}}</td>
+            <td>{{transaction.category}}</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<!-- <ul>
+    <li ng-repeat="transaction in $ctrl.transactions | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+        <a href="#!/transaction/{{phone.id}}">
+            <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
+        </a>
+        <a href="#!/transaction/{{phone.id}}">{{phone.name}}</a>
+        <p>{{phone.snippet}}</p>
+    </li>
+</ul>
+<p>Total number of phones, containing "{{$ctrl.query}}": {{$ctrl.phones.length}}</p> -->

@@ -1,0 +1,1 @@
+angular.module('transactionsList', ['core.transaction']);
