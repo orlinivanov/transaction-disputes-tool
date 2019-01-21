@@ -3,7 +3,7 @@ angular
     .config(['$routeProvider', function config($routeProvider) {
         $routeProvider
             .when('/', {
-                template: '<transactions-list></transactions-list>'
+                template: '<h2>About Disputes Tool</h2>'
             })
             .when('/transactions', {
                 template: '<transactions-list></transactions-list>'
@@ -17,8 +17,5 @@ angular
             // when('/phones/:phoneId', {
             //     template: '<phone-detail></phone-detail>'
             // }).
-            .when('/about', {
-                template: '<h1>About Page</h1>'
-            })
             .otherwise('/');
     }]);

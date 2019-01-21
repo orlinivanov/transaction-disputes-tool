@@ -1,9 +1,9 @@
-<h1>Disputes</h1>
+<h2>Unresolved Disputes</h2>
 
-<table>
-    <thead>
+<table class="table table-hover">
+    <thead class="thead-dark">
         <tr>
-            <th>Due Date</th>
+            <th>Days Left</th>
             <th>Dispute Date</th>
             <th>Dispute Reason</th>
             <th>Card Provider</th>
@@ -18,9 +18,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="dispute in $ctrl.disputes">
-            <td>{{dispute.dueData}}</td>
-            <td>{{dispute.disputeDate}}</td>
+        <tr ng-repeat="dispute in $ctrl.disputes | orderBy:$ctrl.orderProp">
+            <td>{{dispute.daysLeft}}</td>
+            <td>{{dispute.disputeDate | date: 'yyyy-MM-dd'}}</td>
             <td>{{dispute.disputeReason}}</td>
             <td>{{dispute.cardProvider}}</td>
             <td>{{dispute.category}}</td>
