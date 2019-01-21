@@ -2,14 +2,14 @@
     Search:
     <input ng-model="$ctrl.query">
 </p> -->
-<!-- <p>
+<h2>Transactions</h2>
+<p>
     Sort by:
     <select ng-model="$ctrl.orderProp">
-        <option value="name">Alphabetical</option>
-        <option value="age">Newest</option>
+        <option value="-transactionAmount">Amount</option>
+        <option value="-transactionDate">Date</option>
     </select>
-</p> -->
-<h2>Transactions</h2>
+</p>
 
 <table class="table table-hover">
     <thead class="thead-dark">
@@ -27,11 +27,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="transaction in $ctrl.transactions">
+        <tr ng-repeat="transaction in $ctrl.transactions | orderBy:$ctrl.orderProp">
             <td>{{transaction.transactionDate | date: 'yyyy-MM-dd'}}</td>
             <td>{{transaction.transactionNumber}}</td>
+            <td class="table-cell-align-right">{{transaction.transactionAmount.toFixed(2)}}</td>
             <td>EUR</td>
-            <td>{{transaction.transactionAmount.toFixed(2)}}</td>
             <td>{{transaction.cardBin}} **** **** {{transaction.cardLastFourDigits}}</td>
             <td>{{transaction.cardProvider}}</td>
             <td>{{transaction.cardEntryMode}}</td>
