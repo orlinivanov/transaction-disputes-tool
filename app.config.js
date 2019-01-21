@@ -1,6 +1,7 @@
 angular
     .module('disputesApp')
-    .config(['$routeProvider', function config($routeProvider) {
+    .config(['$routeProvider', '$locationProvider', '$compileProvider', function config($routeProvider, $locationProvider, $compileProvider) {
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension|file|data|img):/);
         $routeProvider
             .when('/', {
                 template: '<h2>About Disputes Tool</h2>'

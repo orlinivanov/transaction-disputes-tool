@@ -4,8 +4,7 @@ angular
         templateUrl: 'js/transactions-list/transactions-list.template.html',
         controller: function TransactionsListController($http) {
             let self = this;
-            // self.orderProp = 'age';
-            // console.log('works');
+            self.orderProp = '-transactionDate';
             $http.get('https://dispuites-tool.firebaseio.com/transactions.json').then(function (response) {
                 self.transactions = response.data;
             });
