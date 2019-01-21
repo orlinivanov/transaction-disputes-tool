@@ -12,6 +12,7 @@
             <th>Entry Mode</th>
             <th>Verification</th>
             <th>Transaction ID</th>
+            <th>Currency</th>
             <th>Amount</th>
             <th>Transaction Date</th>
             <th>Shop ID</th>
@@ -28,7 +29,8 @@
             <td>{{dispute.cardEntryMode}}</td>
             <td>{{dispute.cardVerificationMethod}}</td>
             <td>{{dispute.transactionNumber}}</td>
-            <td>{{dispute.transactionAmount}}</td>
+            <td>EUR</td>
+            <td class="table-cell-align-right">{{dispute.transactionAmount}}</td>
             <td>{{dispute.transactionDate | date: 'yyyy-MM-dd'}}</td>
             <td>{{dispute.shopId}}</td>
         </tr>
