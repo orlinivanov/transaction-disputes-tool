@@ -1,0 +1,36 @@
+<h1>Disputes</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Due Date</th>
+            <th>Dispute Date</th>
+            <th>Dispute Reason</th>
+            <th>Card Provider</th>
+            <th>Category</th>
+            <th>Card Number</th>
+            <th>Entry Mode</th>
+            <th>Verification</th>
+            <th>Transaction ID</th>
+            <th>Amount</th>
+            <th>Transaction Date</th>
+            <th>Shop ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="dispute in $ctrl.disputes">
+            <td>{{dispute.dueData}}</td>
+            <td>{{dispute.disputeDate}}</td>
+            <td>{{dispute.disputeReason}}</td>
+            <td>{{dispute.cardProvider}}</td>
+            <td>{{dispute.category}}</td>
+            <td>{{dispute.cardBin}} **** **** {{dispute.cardLastFourDigits}}</td>
+            <td>{{dispute.cardEntryMode}}</td>
+            <td>{{dispute.cardVerificationMethod}}</td>
+            <td>{{dispute.transactionNumber}}</td>
+            <td>{{dispute.transactionAmount}}</td>
+            <td>{{dispute.transactionDate | date: 'yyyy-MM-dd'}}</td>
+            <td>{{dispute.shopId}}</td>
+        </tr>
+    </tbody>
+</table>

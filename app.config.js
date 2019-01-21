@@ -9,7 +9,7 @@ angular
                 template: '<transactions-list></transactions-list>'
             })
             .when('/disputes', {
-                template: '<h1>Disputes Page</h1>'
+                template: '<disputes-list></disputes-list>'
             })
             .when('/shops', {
                 template: '<shops-list></shops-list>'
