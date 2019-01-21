@@ -1,4 +1,4 @@
 angular.module('shopsList', [
     'ngRoute',
-    'core.shops'
+    // 'core.shops'
 ]);
