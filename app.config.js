@@ -15,8 +15,8 @@ angular
             .when('/shops', {
                 template: '<shops-list></shops-list>'
             })
-            // when('/phones/:phoneId', {
-            //     template: '<phone-detail></phone-detail>'
-            // }).
+            .when('/transaction-details/:transactionNum', {
+                template: '<transaction-details></transaction-details>'
+            })
             .otherwise('/');
     }]);

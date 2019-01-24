@@ -1,0 +1,48 @@
+<main class="container">
+    <!-- <h2>Transaction Receipt</h2> -->
+    <table>
+        <thead>
+            <tr>
+                <th>{{$ctrl.shopDetails.business_name}}</th>
+            </tr>
+            <tr>
+                <th>{{$ctrl.shopDetails.street}}</th>
+            </tr>
+            <tr>
+                    <th>{{$ctrl.shopDetails.city}}, {{$ctrl.shopDetails.country}}</th>
+                </tr>
+            <tr>
+                <th>Phone: {{$ctrl.shopDetails.phone_number}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Purchase</td>
+            </tr>
+            <tr>
+                <td>EUR {{$ctrl.transactionDetails.transactionAmount}}</td>
+            </tr>
+            <tr>
+                <td>{{$ctrl.transactionDetails.cardVerificationMethod}}</td>
+            </tr>
+            <tr>
+                <td>{{$ctrl.transactionDetails.cardProvider}}</td>
+            </tr>
+            <tr>
+                <td>**** **** **** {{$ctrl.transactionDetails.cardLastFourDigits}}</td>
+            </tr>
+            <tr>
+                <td>{{$ctrl.transactionDetails.cardEntryMode}} Read</td>
+            </tr>
+            <tr>
+                <td>{{$ctrl.transactionNum}}</td>
+            </tr>
+            <tr>
+                <td>{{$ctrl.transactionDetails.transactionDate | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+            </tr>
+            <tr>
+                <td>Merchant copy</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
