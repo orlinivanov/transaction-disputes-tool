@@ -1,0 +1,44 @@
+<main class="container">
+    <h2>{{$ctrl.shopDetails.business_name}}</h2>
+
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th>Country:</th>
+                <td>{{$ctrl.shopDetails.country}}</td>
+            </tr>
+            <tr>
+                <th>Category:</th>
+                <td>{{$ctrl.shopDetails.category}}</td>
+            </tr>
+            <tr>
+                <th>Shop ID:</th>
+                <td>{{$ctrl.shopDetails.shop_id}}</td>
+            </tr>
+            <tr>
+                <th>Owner name:</th>
+                <td>{{$ctrl.shopDetails.first_name}} {{$ctrl.shopDetails.last_name}}</td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td>{{$ctrl.shopDetails.email}}</td>
+            </tr>
+            <tr>
+                <th>Phone:</th>
+                <td>{{$ctrl.shopDetails.phone_number}}</td>
+            </tr>
+            <tr>
+                <th>City:</th>
+                <td>{{$ctrl.shopDetails.city}}</td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td>{{$ctrl.shopDetails.street}}</td>
+            </tr>
+            <tr>
+                <th>Registration date:</th>
+                <td>{{$ctrl.shopDetails.registration_date | date: 'yyyy-MM-dd'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</main>

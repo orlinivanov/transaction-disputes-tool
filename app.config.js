@@ -18,5 +18,8 @@ angular
             .when('/transaction-details/:transactionNum', {
                 template: '<transaction-details></transaction-details>'
             })
+            .when('/shop-details/:shopId', {
+                template: '<shop-details></shop-details>'
+            })
             .otherwise('/');
     }]);

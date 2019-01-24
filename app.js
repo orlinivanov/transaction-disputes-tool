@@ -6,5 +6,6 @@ angular.module('disputesApp', [
     'transactionsList',
     'shopsList',
     'disputesList',
-    'transactionDetails'
+    'transactionDetails',
+    'shopDetails'
 ]);
