@@ -17,7 +17,7 @@
     </thead>
     <tbody>
         <tr ng-repeat="shop in $ctrl.shops">
-            <td>{{shop.shop_id}}</td>
+            <td><a href="#!/shop-details/{{shop.shop_id}}">{{shop.shop_id}}</a></td>
             <td>{{shop.business_name}}</td>
             <td>{{shop.category}}</td>
             <td>{{shop.country}}</td>

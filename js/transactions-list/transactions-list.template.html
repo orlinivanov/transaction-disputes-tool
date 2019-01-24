@@ -30,14 +30,14 @@
     <tbody>
         <tr ng-repeat="transaction in $ctrl.transactions | orderBy:$ctrl.orderProp">
             <td>{{transaction.transactionDate | date: 'yyyy-MM-dd'}}</td>
-            <td>{{transaction.transactionNumber}}</td>
+            <td><a ng-href="#!/transaction-details/{{transaction.transactionNumber}}">{{transaction.transactionNumber}}</a></td>
             <td class="table-cell-align-right">{{transaction.transactionAmount.toFixed(2)}}</td>
             <td>EUR</td>
             <td>{{transaction.cardBin}} **** **** {{transaction.cardLastFourDigits}}</td>
             <td>{{transaction.cardProvider}}</td>
             <td>{{transaction.cardEntryMode}}</td>
             <td>{{transaction.cardVerificationMethod}}</td>
-            <td>{{transaction.shopId}}</td>
+            <td><a href="#!/shop-details/{{transaction.shopId}}">{{transaction.shopId}}</a></td>
             <td>{{transaction.category}}</td>
         </tr>
     </tbody>
