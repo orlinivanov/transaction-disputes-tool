@@ -30,7 +30,7 @@
             <td>{{dispute.cardVerificationMethod}}</td>
             <td>{{dispute.transactionNumber}}</td>
             <td>EUR</td>
-            <td class="table-cell-align-right">{{dispute.transactionAmount}}</td>
+            <td class="table-cell-align-right">{{dispute.transactionAmount.toFixed(2)}}</td>
             <td>{{dispute.transactionDate | date: 'yyyy-MM-dd'}}</td>
             <td>{{dispute.shopId}}</td>
         </tr>

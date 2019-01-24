@@ -13,7 +13,6 @@ angular
                             trn.disputeDate = new Date();
                             trn.disputeDate.setDate(curDate.getDate() - getRandomInt(14));
                             trn.daysLeft = curDate.getDate() - trn.disputeDate.getDate();
-
                             return trn;
                         });
                 });
