@@ -4,7 +4,7 @@ angular
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension|file|data|img):/);
         $routeProvider
             .when('/', {
-                template: '<h2>About Disputes Tool</h2>'
+                template: '<home></home>'
             })
             .when('/transactions', {
                 template: '<transactions-list></transactions-list>'
